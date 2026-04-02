@@ -1,0 +1,10 @@
+---
+- name: Start IIS
+  hosts: windows
+  gather_facts: no
+
+  tasks:
+    - name: Start IIS Service
+      win_service:
+        name: W3SVC
+        state: started
